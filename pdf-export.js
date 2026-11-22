@@ -1,0 +1,26 @@
+/* Local PDF generation. No pupil data leaves the browser. */
+async function buildPlanPDF(p,rows,fonts){
+ const {PDFDocument,rgb}=PDFLib,doc=await PDFDocument.create();doc.registerFontkit(fontkit);
+ const regular=await doc.embedFont(fonts.regular,{subset:true}),bold=await doc.embedFont(fonts.bold,{subset:true});
+ doc.setTitle('Förderplan – '+p.code);doc.setSubject('Individuelle Förderplanung · Förderschwerpunkt Lernen');doc.setCreator('Bausteine zur Förderplanung');
+ const W=841.89,H=595.28,M=30,B=38,widths=[154,155,222,108,142.89],heads=['Beobachtung /\nAusgangslage','Förderziel','Maßnahmen &\nMaterialien','Umsetzung','Überprüfung &\nVerlauf'];
+ const ink=rgb(.12,.23,.19),green=rgb(.14,.34,.28),line=rgb(.72,.79,.74),light=rgb(.96,.98,.96),white=rgb(1,1,1);let page,y;
+ function wrap(text,font,size,width){let out=[];for(const para of String(text??'').replace(/\r/g,'').split('\n')){if(!para){out.push('');continue}let current='';for(let word of para.split(/\s+/)){let parts=[];if(font.widthOfTextAtSize(word,size)>width){let chunk='';for(const ch of word){if(chunk&&font.widthOfTextAtSize(chunk+ch,size)>width){parts.push(chunk);chunk=''}chunk+=ch}if(chunk)parts.push(chunk)}else parts=[word];for(const part of parts){let next=current?current+' '+part:part;if(current&&font.widthOfTextAtSize(next,size)>width){out.push(current);current=part}else current=next}}out.push(current)}return out}
+ function newPage(){page=doc.addPage([W,H]);y=H-M;page.drawText('BAUSTEINE ZUR FÖRDERPLANUNG  /  FÖRDERSCHWERPUNKT LERNEN',{x:M,y:y-9,font:regular,size:9,color:green});y-=30;page.drawText('Tabellarischer Förderplan'+(p.demo?' · Fiktiver Demofall':''),{x:M,y:y-20,font:bold,size:20,color:ink});y-=35;for(const l of wrap(`${p.code} · Klasse ${p.grade||'offen'} · ${date(p.start)} – ${date(p.end)}`,regular,11,W-2*M)){page.drawText(l,{x:M,y:y-11,font:regular,size:11,color:ink});y-=15}y-=12}
+ function paragraph(label,value){const lines=wrap(label+': '+(value||'nicht dokumentiert'),regular,11,W-2*M);for(const l of lines){if(y<B+30)newPage();page.drawText(l,{x:M,y:y-11,font:regular,size:11,color:ink});y-=15}y-=7}
+ function header(){if(y<B+85)newPage();let x=M;for(let i=0;i<widths.length;i++){page.drawRectangle({x,y:y-43,width:widths[i],height:43,color:green,borderColor:white,borderWidth:.5});wrap(heads[i],bold,11,widths[i]-14).forEach((l,j)=>page.drawText(l,{x:x+7,y:y-15-j*14,font:bold,size:11,color:white}));x+=widths[i]}y-=43}
+ newPage();paragraph('Stärken und Ressourcen',p.strengths);paragraph('Schulischer Kontext',p.context);paragraph('Perspektive des Kindes',p.voice);paragraph('Familiärer Kontext',p.family);paragraph('Bestehende außerschulische Förderung',p.externalSupport);header();
+ if(!rows.length){paragraph('Förderziele','Noch keine Förderziele dokumentiert.')}
+ for(let ri=0;ri<rows.length;ri++){
+  const cells=rows[ri].map((s,i)=>wrap(s,regular,12,widths[i]-16)),total=Math.max(...cells.map(x=>x.length));const freshCapacity=Math.floor((H-M-30-35-15*wrap(`${p.code} · Klasse ${p.grade||'offen'} · ${date(p.start)} – ${date(p.end)}`,regular,11,W-2*M).length-12-43-B-16)/16);if(total<=freshCapacity && total*16+16>y-B){newPage();header()}let offset=0;
+  while(offset<total){let capacity=Math.floor((y-B-16)/16);if(capacity<3){newPage();header();capacity=Math.floor((y-B-16)/16)}let n=Math.min(total-offset,capacity),height=n*16+16,x=M;
+   for(let ci=0;ci<widths.length;ci++){page.drawRectangle({x,y:y-height,width:widths[ci],height,color:ri%2?light:white,borderColor:line,borderWidth:.6});cells[ci].slice(offset,offset+n).forEach((l,j)=>{if(l)page.drawText(l,{x:x+8,y:y-20-j*16,font:regular,size:12,color:ink})});x+=widths[ci]}
+   offset+=n;y-=height;if(offset<total){newPage();page.drawText(`Fortsetzung Förderziel ${ri+1}`,{x:M,y:y-10,font:regular,size:9,color:green});y-=18;header()}
+  }
+ }
+ y-=14;paragraph('Abstimmung / nächste Besprechung','________________________________________________________');
+ const pages=doc.getPages();pages.forEach((pg,i)=>{pg.drawLine({start:{x:M,y:27},end:{x:W-M,y:27},thickness:.5,color:line});pg.drawText(`Bausteine zur Förderplanung · Erstellt am ${date(today())} · Individuelle Auswahl aus dem Förderkatalog`,{x:M,y:15,font:regular,size:8,color:ink});pg.drawText(`Seite ${i+1} / ${pages.length}`,{x:W-M-68,y:15,font:regular,size:8,color:ink})});
+ return doc.save();
+}
+let pdfBusy=false;
+async function exportPlanPDF(){if(pdfBusy)return;if(!plan().goals.length)return toast('Bitte zuerst mindestens ein Förderziel anlegen.');pdfBusy=true;toast('Tabellarischer Förderplan wird als PDF erstellt …');const snapshot=JSON.parse(JSON.stringify(plan()));try{let responses=await Promise.all(['vendor/DejaVuSans.ttf','vendor/DejaVuSans-Bold.ttf'].map(url=>fetch(url)));if(responses.some(r=>!r.ok))throw Error('Schriftdateien nicht verfügbar.');let buffers=await Promise.all(responses.map(r=>r.arrayBuffer()));let bytes=await buildPlanPDF(snapshot,tableRows(snapshot),{regular:buffers[0],bold:buffers[1]});let filename='Foerderplan_'+snapshot.code.replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g,'_')+'_'+today()+'.pdf';download(bytes,filename,'application/pdf');toast('Tabellarischer Förderplan als PDF zum Download bereit.')}catch(e){toast('PDF konnte nicht erstellt werden. Alternativ „Tabelle drucken“ verwenden.');console.error('PDF export failed',e)}finally{pdfBusy=false}}
