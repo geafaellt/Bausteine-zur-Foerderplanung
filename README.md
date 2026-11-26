@@ -6,8 +6,8 @@ Bereitgestellt von Josefine Beer (Fachberaterin Förderschwerpunkt Lernen – La
 
 ## Funktionen
 
-- 74 Förderbausteine mit beobachtbaren Schwierigkeiten, Förderzielen, Maßnahmen und Materialien
-- Zu allen 74 Zielen kindgerechte Ich-Sätze und lokal eingebundene Piktogramme
+- 114 Förderbausteine mit beobachtbaren Schwierigkeiten, Förderzielen, Maßnahmen und Materialien
+- Zu allen 114 Zielen kindgerechte Ich-Sätze und lokal eingebundene Piktogramme
 - Anpassbare Schülerfassung mit eigener Vorschau und PDF im A4-Hochformat
 - Bei veränderten oder eigenen Zielen Prüfung der Ich-Formulierung vor dem Schüler-PDF
 - Schrittweise Planung und PDF-Export
@@ -32,3 +32,14 @@ Im Schritt „Förderziele“ stehen unter „Für die Schülerfassung“ der Zi
 Bestehende Pläne erhalten die Katalogvorschläge beim Anzeigen, ohne vorhandene Inhalte zu überschreiben. Individuelle Formulierungen, Hilfen und Bildauswahl werden mit der JSON-Sicherung gespeichert. Wenn sich der Wortlaut des fachlichen Förderziels ändert, ist die Passung vor dem Schülerexport erneut zu bestätigen.
 
 Die Vektorpiktogramme sind Bestandteil des Quellcodes, benötigen keine externen Dienste und haben beschreibende Alternativtexte. Sie sollten gemeinsam mit dem Kind eingeführt werden.
+
+
+## Beobachtungen für Klasse 1 bis 9
+
+Die Auswahl enthält 74 sprachlich präzisierte stufenübergreifende Bausteine und 40 neue situative Bausteine: je zehn für 1–2, 3–4, 5–6 und 7–9, davon jeweils zwei pro Förderbereich. Die Zuordnung beschreibt altersgemäße Situationen und keine verbindlichen Kompetenznormen. Alle stufenübergreifenden Bausteine bleiben in jedem Filter erreichbar.
+
+Unter „Beobachtungen“ wird die Klassenstufen-Gruppe aus den Schülerdaten vorausgewählt. Die Lehrkraft kann die Gruppe wechseln oder „Alle anzeigen“ wählen. Unklare, gemischte oder nicht unterstützte Klasseneingaben starten mit „Alle anzeigen“. Ein bewusst gewählter Filter bleibt für diesen Plan erhalten, bis die Klassenangabe geändert wird. Die Ansicht „Nur Auswahl zeigen“ berücksichtigt alle ausgewählten Beobachtungen unabhängig vom Filter.
+
+Bestehende Beobachtungsformulierungen, Ziele und Verlaufseinträge werden nicht überschrieben. Neue Bausteine enthalten auch Zielvorschläge, Maßnahmen, Materialien, Ich-Sätze und Piktogramme. Die Ergänzungen sind pädagogische Formulierungshilfen, keine neu recherchierten oder einzeln evaluierten Programme.
+
+Prüfungen: `node tests/student-version.cjs` und `node tests/observation-bands.cjs`.

@@ -80,6 +80,7 @@ const STUDENT_GOALS = {
 
 /* Local vector pictograms: exact, reusable UI symbols without external requests.
    Each icon has an accessible label; the accompanying sentence carries the meaning. */
+for(const t of TEMPLATES){if(t.studentText&&t.studentIcon)STUDENT_GOALS[t.id]=[t.studentText,t.studentIcon]}
 const STUDENT_ICONS = {
  listen: ['Zuhören', 'M8 7a5 5 0 0 1 10 0c0 5-6 4-6 9a3 3 0 0 1-6 0M11 8a2 2 0 0 1 4 0c0 2-3 2-3 4M3 6v4M21 5v6'],
  syllables: ['Silben verbinden', 'M2 8h5M10 8h5M18 8h4M2 14c0 7 5 7 5 0M10 14c0 7 5 7 5 0M18 14c0 7 4 7 4 0'],
@@ -107,7 +108,7 @@ const STUDENT_ICONS = {
  shapes: ['Formen', 'M6 2l5 8H1ZM14 3h8v7h-8ZM10 18a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM14 14h8v8h-8Z'],
  chart: ['Tabelle und Diagramm', 'M3 2v20h19M7 14h3v5H7ZM13 9h3v10h-3ZM19 4h3v15h-3Z'],
  start: ['Beginnen', 'M5 3v18M6 4h14l-4 5 4 5H6M2 22h7'],
- timer: ['Bei der Aufgabe bleiben', 'M8 2h8M12 2v3M21 14a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 8v6l4 2'],
+ timer: ['Zeit im Blick behalten', 'M8 2h8M12 2v3M21 14a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 8v6l4 2'],
  stop: ['Stopp und warten', 'M7 2h10l5 5v10l-5 5H7l-5-5V7ZM8 8l8 8M16 8l-8 8'],
  move: ['Bewegen', 'M15 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 11l4-3 5 3h5M11 8l-2 7 5 3-1 5M9 15l-4 7M3 5l4 1M2 11h3'],
  steps: ['Weiterkommen', 'M2 21h5v-6h5V9h5V3h5M3 7l7-4M7 1l3 2-1 4'],
@@ -216,3 +217,4 @@ document.addEventListener('change',e=>{
  if(e.target.checked){if(!s.text.trim()||!s.icon){e.target.checked=false;toast('Bitte zuerst Zielsatz und Piktogramm ergänzen.');return}g.studentSourceText=g.text;g.studentText=s.text;g.studentIcon=s.icon}else g.studentSourceText='';
  wizardSave();$('#student-review-hint').textContent=e.target.checked?'Die Schülerfassung passt zum zuletzt geprüften Förderziel.':'Bitte die Schülerfassung prüfen und bestätigen.';
 });
+
