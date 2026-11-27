@@ -1,4 +1,4 @@
-const AREAS=['Deutsch','Mathematik','Lern- und Arbeitsverhalten','Sozialverhalten','Wahrnehmung'];
+const AREAS=['Deutsch','Mathematik','Lern- und Arbeitsverhalten','Sozialverhalten','Wahrnehmung','Kognition und Gedächtnis'];
 const SOURCES={
 lesen:{short:'IES / WWC · 2022',title:'Providing Reading Interventions for Students in Grades 4–9',author:'Vaughn et al. · Institute of Education Sciences / What Works Clearinghouse (2022)',url:'https://ies.ed.gov/ncee/wwc/PracticeGuide/29',evidence:'Forschungssynthese; starke Evidenz für Dekodieren, Leseflüssigkeit und Verstehensstrategien.',population:'Lernende mit Leseschwierigkeiten, Klassen 4–9; überwiegend englischsprachiger Unterricht.',limit:'Kein pauschaler Wirksamkeitsnachweis für den deutschen FSP Lernen. Sprache, Lesestand und Intensität individuell anpassen.'},
 basis:{short:'IES / WWC · 2016/2019',title:'Foundational Skills to Support Reading for Understanding in Kindergarten Through 3rd Grade',author:'Foorman et al. · IES / WWC (2016, überarbeitet 2019)',url:'https://ies.ed.gov/ncee/wwc/PracticeGuide/21',evidence:'Starke Evidenz für Laut-Buchstaben-Verknüpfung und Dekodieren; moderate Evidenz für tägliches Lesen zusammenhängender Texte.',population:'Kindergarten bis Klasse 3, englischsprachiger Schriftspracherwerb.',limit:'Übertragung auf ältere Lernende und deutsche Orthografie gesondert prüfen. Materialien altersangemessen auswählen.'},
@@ -3158,6 +3158,286 @@ const TEMPLATES=[
     ],
     "measures": "Belastende Situationen mit dem Jugendlichen besprechen\nGeeignete Hilfe und erreichbares Signal verbindlich vereinbaren\nArbeitsbedingungen anpassen und Rückkehr gemeinsam abstimmen",
     "materials": "Signalkarte\nVereinbarte Schutz- oder Pausenmöglichkeit",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_sortieren",
+    "area": "Kognition und Gedächtnis",
+    "title": "Nach einem Merkmal ordnen",
+    "observation": "Legt beim Sortieren von sechs vertrauten Gegenständen nach einem vereinbarten Merkmal wiederholt Gegenstände in eine andere Gruppe und verändert dabei das Sortiermerkmal.",
+    "goal": "Die Schülerin/der Schüler ordnet sechs vertraute Gegenstände nach einem vorgegebenen Merkmal mit sichtbaren Gruppenkarten in mindestens 4 von 5 Durchgängen richtig zu und zeigt oder benennt das gemeinsame Merkmal.",
+    "studentText": "Ich ordne die Dinge. Ich zeige oder sage, was zusammenpasst.",
+    "studentIcon": "shapes",
+    "gradeBands": [],
+    "measureOptions": [
+      "Ein Merkmal gemeinsam festlegen und an zwei Gegenständen vormachen",
+      "Gruppen mit Bild oder Wort beschriften und während der Aufgabe sichtbar lassen",
+      "Zunächst deutlich unterscheidbare Merkmale wählen; erst nach sicherer Zuordnung ähnliche Beispiele ergänzen",
+      "Klasse 1–4: Formen oder Alltagsgegenstände; Klasse 5–9: Werkzeuge, Verpackungen oder Waren nach Funktion ordnen"
+    ],
+    "materialOptions": [
+      "Sechs vertraute Gegenstände oder Fotos",
+      "Zwei bis drei Sortierfelder",
+      "Bild- oder Wortkarten für die Gruppen"
+    ],
+    "measures": "Ein Merkmal gemeinsam festlegen und an zwei Gegenständen vormachen\nGruppen mit Bild oder Wort beschriften und während der Aufgabe sichtbar lassen\nZunächst deutlich unterscheidbare Merkmale wählen; erst nach sicherer Zuordnung ähnliche Beispiele ergänzen\nKlasse 1–4: Formen oder Alltagsgegenstände; Klasse 5–9: Werkzeuge, Verpackungen oder Waren nach Funktion ordnen",
+    "materials": "Sechs vertraute Gegenstände oder Fotos\nZwei bis drei Sortierfelder\nBild- oder Wortkarten für die Gruppen",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_regel",
+    "area": "Kognition und Gedächtnis",
+    "title": "Eine Regel erkennen und fortsetzen",
+    "observation": "Setzt eine gelegte Reihe mit wiederkehrender Zweierfolge nach dem sichtbaren Beispiel mit einem anderen als dem zur Regel passenden Element fort.",
+    "goal": "Die Schülerin/der Schüler ergänzt bei fünf neuen Reihen mit wiederkehrender Zweierfolge jeweils die zwei nächsten Elemente in mindestens 4 Fällen richtig; die Vorlage bleibt sichtbar.",
+    "studentText": "Ich finde die Regel. Ich lege die Reihe passend weiter.",
+    "studentIcon": "sequence",
+    "gradeBands": [],
+    "measureOptions": [
+      "Die wiederkehrende Einheit gemeinsam einkreisen und laut oder durch Zeigen verfolgen",
+      "Die nächste Stelle zunächst aus zwei Möglichkeiten auswählen lassen",
+      "Neue Farben oder Symbole bei gleicher Regel anbieten und die Hilfe dokumentieren",
+      "Klasse 1–4: Formen- oder Perlenreihen; Klasse 5–9: sachliche Symbolfolgen oder wiederkehrende Arbeitsrhythmen"
+    ],
+    "materialOptions": [
+      "Karten mit kurzen Symbolfolgen",
+      "Passende Legeelemente",
+      "Rahmen zum Markieren der wiederkehrenden Einheit"
+    ],
+    "measures": "Die wiederkehrende Einheit gemeinsam einkreisen und laut oder durch Zeigen verfolgen\nDie nächste Stelle zunächst aus zwei Möglichkeiten auswählen lassen\nNeue Farben oder Symbole bei gleicher Regel anbieten und die Hilfe dokumentieren\nKlasse 1–4: Formen- oder Perlenreihen; Klasse 5–9: sachliche Symbolfolgen oder wiederkehrende Arbeitsrhythmen",
+    "materials": "Karten mit kurzen Symbolfolgen\nPassende Legeelemente\nRahmen zum Markieren der wiederkehrenden Einheit",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_zusammenhang",
+    "area": "Kognition und Gedächtnis",
+    "title": "Ursache und Folge zuordnen",
+    "observation": "Wählt zu einer dargestellten vertrauten Alltagssituation aus zwei möglichen Folgen wiederholt die unpassende Folge und kann den Zusammenhang auch durch Zeigen nicht verdeutlichen.",
+    "goal": "Die Schülerin/der Schüler ordnet in mindestens 4 von 5 vertrauten Alltagssituationen aus zwei Bildkarten die passende Folge zu und erläutert den Zusammenhang mit einem Satzanfang oder durch Zeigen.",
+    "studentText": "Ich überlege: Was passiert dann? Ich zeige oder erkläre den Zusammenhang.",
+    "studentIcon": "sequence",
+    "gradeBands": [],
+    "measureOptions": [
+      "Bekannte, eindeutige Ursache-Folge-Situationen zunächst praktisch zeigen",
+      "Gemeinsam beschreiben, was zuerst geschieht und was dadurch folgt",
+      "Zwei Antwortmöglichkeiten anbieten und die Auswahl mit dem Kind prüfen",
+      "Klasse 1–4: Wasser verschütten oder Pflanzen gießen; Klasse 5–9: unverschlossene Flasche oder fehlendes Material; keine gefährlichen Versuche"
+    ],
+    "materialOptions": [
+      "Fotos vertrauter Alltagssituationen",
+      "Je zwei mögliche Folgekarten",
+      "Satzanfang „Wenn …, dann …“"
+    ],
+    "measures": "Bekannte, eindeutige Ursache-Folge-Situationen zunächst praktisch zeigen\nGemeinsam beschreiben, was zuerst geschieht und was dadurch folgt\nZwei Antwortmöglichkeiten anbieten und die Auswahl mit dem Kind prüfen\nKlasse 1–4: Wasser verschütten oder Pflanzen gießen; Klasse 5–9: unverschlossene Flasche oder fehlendes Material; keine gefährlichen Versuche",
+    "materials": "Fotos vertrauter Alltagssituationen\nJe zwei mögliche Folgekarten\nSatzanfang „Wenn …, dann …“",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_vergleich",
+    "area": "Kognition und Gedächtnis",
+    "title": "Gemeinsamkeiten für eine neue Zuordnung nutzen",
+    "observation": "Ordnet nach einem gemeinsam besprochenen Gegenstand-Funktion-Paar einem weiteren vertrauten Gegenstand eine unpassende Funktion zu, obwohl beide Funktionen zuvor im Handeln gezeigt wurden.",
+    "goal": "Die Schülerin/der Schüler wählt nach einem sichtbaren Beispielpaar bei mindestens 4 von 5 neuen Gegenstand-Funktion-Zuordnungen aus zwei Möglichkeiten die passende Funktion und zeigt oder benennt die Gemeinsamkeit.",
+    "studentText": "Ich schaue auf das Beispiel. Ich finde, was genauso zusammenpasst.",
+    "studentIcon": "choice",
+    "gradeBands": [],
+    "measureOptions": [
+      "Bekannte Gegenstände und ihre Verwendung vor der Aufgabe prüfen",
+      "Ein Beispielpaar handelnd zeigen und die Beziehung in einfachen Worten benennen",
+      "Neue Zuordnungen mit zwei Auswahlmöglichkeiten anbieten und die Beziehung begründen lassen",
+      "Klasse 1–4: Stift–zeichnen und Schere–schneiden; Klasse 5–9: Werkzeug–Arbeitsschritt oder Gerät–Funktion"
+    ],
+    "materialOptions": [
+      "Vertraute Gegenstände oder Fotos",
+      "Funktionskarten",
+      "Sichtbares Beispielpaar"
+    ],
+    "measures": "Bekannte Gegenstände und ihre Verwendung vor der Aufgabe prüfen\nEin Beispielpaar handelnd zeigen und die Beziehung in einfachen Worten benennen\nNeue Zuordnungen mit zwei Auswahlmöglichkeiten anbieten und die Beziehung begründen lassen\nKlasse 1–4: Stift–zeichnen und Schere–schneiden; Klasse 5–9: Werkzeug–Arbeitsschritt oder Gerät–Funktion",
+    "materials": "Vertraute Gegenstände oder Fotos\nFunktionskarten\nSichtbares Beispielpaar",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_loesungsweg",
+    "area": "Kognition und Gedächtnis",
+    "title": "Einen passenden Lösungsweg auswählen",
+    "observation": "Probiert bei einer vertrauten praktischen Aufgabe wiederholt denselben nicht passenden Weg, obwohl zwei bereits geübte Lösungswege als Bildkarten bereitliegen.",
+    "goal": "Die Schülerin/der Schüler wählt bei mindestens 4 von 5 vertrauten praktischen Aufgaben aus zwei sichtbaren, bereits geübten Lösungswegen einen passenden Weg aus und prüft das Ergebnis mit der vereinbarten Kontrollfrage.",
+    "studentText": "Ich wähle einen passenden Weg. Danach prüfe ich: Hat es geklappt?",
+    "studentIcon": "checklist",
+    "gradeBands": [],
+    "measureOptions": [
+      "Zwei Lösungswege zunächst einzeln vormachen und gemeinsam üben",
+      "Vor dem Handeln beide Karten ansehen und eine Auswahl begründen oder zeigen lassen",
+      "Mit der Frage „Passt das Ergebnis zur Aufgabe?“ zur Kontrolle anleiten",
+      "Klasse 1–4: Material passend zusammenstellen; Klasse 5–9: Packliste bearbeiten oder eine Arbeitsvorbereitung durchführen"
+    ],
+    "materialOptions": [
+      "Zwei Karten mit geübten Lösungswegen",
+      "Vertraute praktische Aufgabe",
+      "Kontrollkarte „Passt mein Ergebnis?“"
+    ],
+    "measures": "Zwei Lösungswege zunächst einzeln vormachen und gemeinsam üben\nVor dem Handeln beide Karten ansehen und eine Auswahl begründen oder zeigen lassen\nMit der Frage „Passt das Ergebnis zur Aufgabe?“ zur Kontrolle anleiten\nKlasse 1–4: Material passend zusammenstellen; Klasse 5–9: Packliste bearbeiten oder eine Arbeitsvorbereitung durchführen",
+    "materials": "Zwei Karten mit geübten Lösungswegen\nVertraute praktische Aufgabe\nKontrollkarte „Passt mein Ergebnis?“",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_buendeln",
+    "area": "Kognition und Gedächtnis",
+    "title": "Informationen in Gruppen merken",
+    "observation": "Lässt beim Zusammenstellen von sechs zuvor gemeinsam benannten Dingen nach Abdecken der Liste mehrere Dinge aus; eine Gruppierung der Dinge nutzt die lernende Person bisher erst nach Hinweis.",
+    "goal": "Die Schülerin/der Schüler ordnet vor dem Abdecken sechs vertraute Bildkarten mit Gruppenkarten zu zwei sinnvollen Gruppen und erinnert nach einer Minute mindestens fünf Inhalte in 4 von 5 Durchgängen; die Gruppenkarten bleiben sichtbar.",
+    "studentText": "Ich bilde Gruppen. So merke ich mir die Dinge.",
+    "studentIcon": "memory",
+    "gradeBands": [],
+    "measureOptions": [
+      "Zunächst mit wenigen sicher benannten Dingen beginnen und den Umfang am Ausgangswert ausrichten",
+      "Das Bilden von zwei Gruppen vormachen und gemeinsam passende Gruppenüberschriften wählen",
+      "Nach dem Abdecken mit den Gruppenüberschriften zum Erinnern anregen; Zeigen aus einer größeren Bildauswahl ermöglichen",
+      "Klasse 1–4: Spiel- und Schulsachen; Klasse 5–9: Zutaten und Geräte oder Material für zwei Arbeitsschritte"
+    ],
+    "materialOptions": [
+      "Sechs vertraute Bildkarten",
+      "Zwei Gruppenkarten",
+      "Abdecktuch und Bildauswahl zur Antwort"
+    ],
+    "measures": "Zunächst mit wenigen sicher benannten Dingen beginnen und den Umfang am Ausgangswert ausrichten\nDas Bilden von zwei Gruppen vormachen und gemeinsam passende Gruppenüberschriften wählen\nNach dem Abdecken mit den Gruppenüberschriften zum Erinnern anregen; Zeigen aus einer größeren Bildauswahl ermöglichen\nKlasse 1–4: Spiel- und Schulsachen; Klasse 5–9: Zutaten und Geräte oder Material für zwei Arbeitsschritte",
+    "materials": "Sechs vertraute Bildkarten\nZwei Gruppenkarten\nAbdecktuch und Bildauswahl zur Antwort",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_wiederholen",
+    "area": "Kognition und Gedächtnis",
+    "title": "Gehörte Informationen durch Wiederholen behalten",
+    "observation": "Gibt nach dem Hören von drei bekannten, zusammengehörigen Begriffen und einer kurzen Wartezeit nur einen Teil wieder; wiederholt die Begriffe nicht von sich aus.",
+    "goal": "Die Schülerin/der Schüler wiederholt nach einem vereinbarten Signal drei langsam genannte vertraute Begriffe und gibt nach 30 Sekunden ohne erneutes Vorsprechen alle drei in mindestens 4 von 5 Durchgängen wieder; die Reihenfolge ist frei.",
+    "studentText": "Ich spreche die Wörter noch einmal. So kann ich sie mir merken.",
+    "studentIcon": "listen",
+    "gradeBands": [],
+    "measureOptions": [
+      "Vorher klären, dass alle Begriffe bekannt und deutlich hörbar sind",
+      "Leises Wiederholen vormachen und mit dem Kind ein Erinnerungssignal vereinbaren",
+      "Zunächst zwei, später drei Inhalte verwenden; Wartezeit und nötige Hilfen festhalten",
+      "Klasse 1–4: Dinge für den Arbeitsplatz; Klasse 5–9: kurze Material- oder Einkaufslisten; alternative Antwort durch Zeigen ermöglichen"
+    ],
+    "materialOptions": [
+      "Drei vertraute Gegenstände oder Begriffe",
+      "Signalkarte „Noch einmal sagen“",
+      "Uhr und größere Bildauswahl für eine Antwort durch Zeigen"
+    ],
+    "measures": "Vorher klären, dass alle Begriffe bekannt und deutlich hörbar sind\nLeises Wiederholen vormachen und mit dem Kind ein Erinnerungssignal vereinbaren\nZunächst zwei, später drei Inhalte verwenden; Wartezeit und nötige Hilfen festhalten\nKlasse 1–4: Dinge für den Arbeitsplatz; Klasse 5–9: kurze Material- oder Einkaufslisten; alternative Antwort durch Zeigen ermöglichen",
+    "materials": "Drei vertraute Gegenstände oder Begriffe\nSignalkarte „Noch einmal sagen“\nUhr und größere Bildauswahl für eine Antwort durch Zeigen",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_verknuepfen",
+    "area": "Kognition und Gedächtnis",
+    "title": "Neue Informationen mit einer Merkhilfe verbinden",
+    "observation": "Ordnet drei neu eingeführte, gemeinsam besprochene Begriffe am folgenden Tag den falschen Bildern zu und nutzt die danebenliegenden Merkhilfen erst nach Aufforderung.",
+    "goal": "Die Schülerin/der Schüler wählt beim Lernen zu drei neuen Begriffen je eine passende Bild- oder Wortmerkhilfe und ordnet am Folgetag mit diesen sichtbaren Hilfen alle drei Begriffe in mindestens 4 von 5 kurzen Lernfolgen richtig zu.",
+    "studentText": "Ich suche mir eine Merkhilfe. Das Bild oder Wort hilft mir beim Erinnern.",
+    "studentIcon": "memory",
+    "gradeBands": [],
+    "measureOptions": [
+      "Bedeutung der Begriffe zuerst mit Handlung oder Beispiel klären",
+      "Je Begriff zwei verständliche Merkhilfen anbieten und eine auswählen lassen",
+      "Die persönliche Verknüpfung erklären oder zeigen lassen und am nächsten Tag wieder aufgreifen",
+      "Klasse 1–4: Begriffe aus dem Klassenraum; Klasse 5–9: altersgerechte Fachbegriffe aus Alltag oder Arbeitslehre"
+    ],
+    "materialOptions": [
+      "Drei Begriffskarten",
+      "Passende Fotos oder eigene Skizzen",
+      "Persönliche Merkkarte"
+    ],
+    "measures": "Bedeutung der Begriffe zuerst mit Handlung oder Beispiel klären\nJe Begriff zwei verständliche Merkhilfen anbieten und eine auswählen lassen\nDie persönliche Verknüpfung erklären oder zeigen lassen und am nächsten Tag wieder aufgreifen\nKlasse 1–4: Begriffe aus dem Klassenraum; Klasse 5–9: altersgerechte Fachbegriffe aus Alltag oder Arbeitslehre",
+    "materials": "Drei Begriffskarten\nPassende Fotos oder eigene Skizzen\nPersönliche Merkkarte",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_abrufen",
+    "area": "Kognition und Gedächtnis",
+    "title": "Gelerntes nach einer Pause gezielt abrufen",
+    "observation": "Kann vier unmittelbar zuvor geübte Zuordnungen richtig zeigen, ordnet am nächsten Unterrichtstag ohne erneutes Vormachen jedoch mehrere davon falsch zu.",
+    "goal": "Die Schülerin/der Schüler ruft am folgenden Unterrichtstag mit vereinbarten Hinweisbildern mindestens drei von vier geübten Zuordnungen richtig ab, bevor die Lösung gezeigt wird; dies gelingt in 4 von 5 kurzen Lernfolgen.",
+    "studentText": "Ich versuche, mich selbst zu erinnern. Danach prüfe ich meine Antwort.",
+    "studentIcon": "memory",
+    "gradeBands": [],
+    "measureOptions": [
+      "Wenige verstandene Inhalte auswählen und eine erste sichere Zuordnung prüfen",
+      "Kurze Abrufphasen am Stundenende und am nächsten Unterrichtstag einplanen",
+      "Zuerst selbst erinnern oder aus Bildern auswählen lassen, dann Lösung zeigen und unmittelbar rückmelden",
+      "Klasse 1–4: Bild–Begriff oder Zahl–Menge; Klasse 5–9: Werkzeug–Funktion oder vertraute Fachbegriffe; Abstand und Hilfen dokumentieren"
+    ],
+    "materialOptions": [
+      "Vier Lernkarten mit getrennten Lösungsseiten",
+      "Vereinbarte Hinweisbilder",
+      "Kurzes Protokoll für Zeitpunkt, richtige Antworten und Hilfen"
+    ],
+    "measures": "Wenige verstandene Inhalte auswählen und eine erste sichere Zuordnung prüfen\nKurze Abrufphasen am Stundenende und am nächsten Unterrichtstag einplanen\nZuerst selbst erinnern oder aus Bildern auswählen lassen, dann Lösung zeigen und unmittelbar rückmelden\nKlasse 1–4: Bild–Begriff oder Zahl–Menge; Klasse 5–9: Werkzeug–Funktion oder vertraute Fachbegriffe; Abstand und Hilfen dokumentieren",
+    "materials": "Vier Lernkarten mit getrennten Lösungsseiten\nVereinbarte Hinweisbilder\nKurzes Protokoll für Zeitpunkt, richtige Antworten und Hilfen",
+    "source": "praxis",
+    "research": "",
+    "material": "",
+    "catalogPage": null,
+    "sourceRow": null
+  },
+  {
+    "id": "kg_vorhaben",
+    "area": "Kognition und Gedächtnis",
+    "title": "Mit einer Erinnerungshilfe an ein Vorhaben denken",
+    "observation": "Beginnt nach einem vereinbarten Signal die nächste Tätigkeit und lässt dabei eine zuvor besprochene Handlung aus, etwa das Einpacken eines benötigten Gegenstands; führt sie nach persönlichem Hinweis aus.",
+    "goal": "Die Schülerin/der Schüler nutzt beim vereinbarten Signal eine sichtbar platzierte Erinnerungskarte und führt die darauf festgehaltene Handlung ohne persönlichen Hinweis in mindestens 4 von 5 Situationen aus.",
+    "studentText": "Beim vereinbarten Zeichen schaue ich auf meine Karte. Ich erledige, was ich mir vorgenommen habe.",
+    "studentIcon": "checklist",
+    "gradeBands": [],
+    "measureOptions": [
+      "Eine einzelne konkrete Handlung und ein deutliches Alltagssignal vereinbaren",
+      "Die Erinnerungskarte gemeinsam an einem gut sichtbaren Ort platzieren und ihre Nutzung üben",
+      "Zunächst gemeinsam auf die Karte schauen; persönliche Hinweise schrittweise verringern",
+      "Klasse 1–4: nach Unterrichtsschluss das Hausaufgabenheft einpacken; Klasse 5–9: vor einem Raumwechsel benötigtes Material prüfen"
+    ],
+    "materialOptions": [
+      "Persönliche Bild- oder Textkarte",
+      "Fester sichtbarer Platz für die Karte",
+      "Vereinbartes Alltagssignal"
+    ],
+    "measures": "Eine einzelne konkrete Handlung und ein deutliches Alltagssignal vereinbaren\nDie Erinnerungskarte gemeinsam an einem gut sichtbaren Ort platzieren und ihre Nutzung üben\nZunächst gemeinsam auf die Karte schauen; persönliche Hinweise schrittweise verringern\nKlasse 1–4: nach Unterrichtsschluss das Hausaufgabenheft einpacken; Klasse 5–9: vor einem Raumwechsel benötigtes Material prüfen",
+    "materials": "Persönliche Bild- oder Textkarte\nFester sichtbarer Platz für die Karte\nVereinbartes Alltagssignal",
     "source": "praxis",
     "research": "",
     "material": "",

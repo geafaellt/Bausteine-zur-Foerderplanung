@@ -3,8 +3,8 @@ const root=path.join(__dirname,'..'),events={},element={remove(){},addEventListe
 const ctx=vm.createContext({crypto:webcrypto,document:{addEventListener(name,fn){(events[name]??=[]).push(fn)},querySelector(){return element}},window:{addEventListener(){},scrollTo(){}},FormData,URL,console,localStorage:{getItem(){return null},setItem(){}}});
 for(const file of ['data.js','app.js','student-goals.js','student-pdf.js','wizard.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8').replace("view='home';render();save(false);",''),ctx);
 const run=code=>vm.runInContext(code,ctx);
-assert.equal(run('TEMPLATES.length'),114);
-assert.equal(run('Object.keys(STUDENT_GOALS).length'),114);
+assert.equal(run('TEMPLATES.length'),124);
+assert.equal(run('Object.keys(STUDENT_GOALS).length'),124);
 for(const t of Array.from(run('TEMPLATES'))){
  const s=run(`studentGoal({templateId:${JSON.stringify(t.id)},text:${JSON.stringify(t.goal)}})`);
  assert(s.text.includes('Ich')||s.text.includes('ich'),t.id+' uses first person');assert(s.icon,t.id+' has a real pictogram');assert(!s.needsReview,t.id+' matches source');
@@ -27,6 +27,6 @@ for(const marker of ['PRIVATE_FAMILY','PRIVATE_CONTEXT','PRIVATE_OBSERVATION','P
 assert(html.includes('Ich beginne mit meiner Karte.'));assert(!html.includes('Individuell verändertes Ziel'),'teacher formulation is not copied');
 run('g.studentText="<img src=x onerror=alert(1)>"');assert(run('studentCardHTML(g,0)').includes('&lt;img'),'student text is escaped');
 run('g.studentText="Ich beginne.";var originalState=JSON.stringify(state);studentPlanHTML(plan());');assert.equal(run('JSON.stringify(state)'),run('originalState'),'preview does not mutate records');
-console.log('Passed: 114 mappings, pictograms, individual wording, review invalidation, custom goals, old records, backup round-trip, import validation, escaping, output fields.');
+console.log('Passed: 124 mappings, pictograms, individual wording, review invalidation, custom goals, old records, backup round-trip, import validation, escaping, output fields.');
 module.exports={run,ctx,root};
 

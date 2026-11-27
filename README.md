@@ -6,8 +6,8 @@ Bereitgestellt von Josefine Beer (Fachberaterin Förderschwerpunkt Lernen – La
 
 ## Funktionen
 
-- 114 Förderbausteine mit beobachtbaren Schwierigkeiten, Förderzielen, Maßnahmen und Materialien
-- Zu allen 114 Zielen kindgerechte Ich-Sätze und lokal eingebundene Piktogramme
+- 124 Förderbausteine mit beobachtbaren Schwierigkeiten, Förderzielen, Maßnahmen und Materialien
+- Zu allen 124 Zielen kindgerechte Ich-Sätze und lokal eingebundene Piktogramme
 - Anpassbare Schülerfassung mit eigener Vorschau und PDF im A4-Hochformat
 - Bei veränderten oder eigenen Zielen Prüfung der Ich-Formulierung vor dem Schüler-PDF
 - Schrittweise Planung und PDF-Export
@@ -43,3 +43,9 @@ Unter „Beobachtungen“ wird die Klassenstufen-Gruppe aus den Schülerdaten vo
 Bestehende Beobachtungsformulierungen, Ziele und Verlaufseinträge werden nicht überschrieben. Neue Bausteine enthalten auch Zielvorschläge, Maßnahmen, Materialien, Ich-Sätze und Piktogramme. Die Ergänzungen sind pädagogische Formulierungshilfen, keine neu recherchierten oder einzeln evaluierten Programme.
 
 Prüfungen: `node tests/student-version.cjs` und `node tests/observation-bands.cjs`.
+
+## Kognition und Gedächtnis
+
+Zehn zusätzliche, stufenübergreifende Bausteine (84 insgesamt) bleiben in allen Filtern für Klasse 1–9 sichtbar. Die Maßnahmen enthalten altersgerechte Beispiele für Klasse 1–4 und 5–9; Anforderungen, Zeitabstände, Hilfen und Erfolgsquoten sind individuell anzupassen. Die Kategorie umfasst Sortieren, Regeln, Ursache und Folge, Beziehungen, Lösungswahl sowie das Gruppieren, Wiederholen, Verknüpfen, Abrufen und Erinnern von Vorhaben. Jeder Baustein enthält Beobachtung, Ziel, Maßnahmen, Materialien, Ich-Satz und ein vorhandenes lokales Piktogramm. Es sind pädagogische Formulierungshilfen, keine Diagnosekriterien oder separat evaluierten Gedächtnistrainings. Vorhandene Pläne und Kategorien werden nicht umgeordnet.
+
+Zusätzliche Prüfung: `node tests/cognition.cjs`.
